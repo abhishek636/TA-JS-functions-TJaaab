@@ -346,20 +346,52 @@ Do the following with above problem.
 // - What is the typeof returnValue
 
 // function Declaration
-// function oddOrEven (x){
-//   if(x % 2 == 0){
-//     return "even";
-//   } else {
-//     return "odd";
-//   }
-// }
+function oddOrEven (x){
+  if(x % 2 == 0){
+    return "number is even";
+  } else {
+    return "number is odd";
+  }
+}
 
-// - Write a Function Expression
+// - Write an anonymous Function Expression
+
+let oddOrEven = function (num){
+  if (num % 2 == 0){
+    return "number is even";
+  } else {
+    return "number is odd";
+  }
+}
+
+// - Write an named Function Expression
 
 const oddOrEven = function oe (x){
   if(x % 2 == 0){
-    return 'even';
+    return "number is even";
   } else {
-    return 'odd';
+    return "number is odd";
   }
 }
+
+// - Write an Arrow Function with curly brackets
+
+const oddOrEven = (x) => {
+  if(x % 2 == 0){
+    return "number is even";
+  } else {
+    return "number is odd";
+  }
+}
+
+// - Write an Arrow Function without curly brackets (hint: use ternary operator)
+
+const oddOrEven = (x) => x % 2 == 0 ? "number is even": "number is odd";
+
+// - Execute the function and store the return value in a variable.
+
+let returnValue = oddOrEven(23);
+
+// - What is the typeof returnValue
+
+typeof returnValue =='string'
