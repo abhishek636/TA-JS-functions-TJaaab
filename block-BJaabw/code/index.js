@@ -27,11 +27,7 @@ isInRange(1, 10, 19); // false
 
 // - Write a Function Decleration for above problem
 function isInRange(low, up, n) {
-  if(low<n,up>n){
-    return true;
-  } else {
-    return false ;
-  }
+  return num > lower && num < upper;
 }
 // - Execute the function with required parameter
 
@@ -54,22 +50,23 @@ Obese: BMI is 30 or more
 */
 
 function calculateBMI(weight, height) {
- let BMI = weight/(height*height);
- switch(BMI){
-   case (BMI < 18.5):
+ let bmi = weight/(height*height);
+ switch(true){
+   case (bmi < 18.5):
      alert ("Underweight");
      break;
-    case (BMI >= 18.5,BMI <= 24.9) :
+    case (bmi >= 18.5 && bmi <= 24.9) :
       alert ("Normal weight");
       break;
-    case (BMI >= 25, BMI <= 29.9) :
+    case (bmi >= 25 && bmi <= 29.9) :
       alert ("Overweight")
       break;
-    default:
+    case bmi > 30:
       alert ("Obese");
       break;
+    default:
+      alert("Enter valid input")
  }
-
 }
 
 /* 3. appropiateDrinks
